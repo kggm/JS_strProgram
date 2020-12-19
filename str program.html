@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="frm1" action="/action_page.php">
+
+<p>This is a simple script made to calculate a strength program.</p>
+<p>Input your estimated 1 rep max and a program will be generated.</p>
+
+<label for="fname">Estimated 1 REP MAX:</label>
+<input id="maxrep" type="text" name="maxrep"><br><br>
+
+</form>
+
+<button onclick="myFunction()">Generate</button>
+
+<h1 id="header1"></h1>
+<p id="set1"></p>
+<p id="set2"></p>
+<p id="set3"></p>
+<p id="set4"></p>
+<p id="set5"></p>
+<p id="set6"></p>
+<p id="set7"></p>
+<p id="set8"></p>
+<p id="set9"></p>
+<p id="set10"></p>
+
+<script>
+function myFunction() {
+  var maxRep = document.getElementById("maxrep").value;
+  
+  var maxRepDisplay = "Your estimated 1 REP max; " + maxRep;
+  document.getElementById("header1").innerHTML = maxRepDisplay;
+  
+  var calc_set_1 = maxRep / 100 * 33;
+  var calc_set_2 = maxRep / 100 * 56;
+  var calc_set_3 = maxRep / 100 * 79;
+  var calc_set_4 = maxRep / 100 * 86;
+  var calc_set_5 = maxRep / 100 * 91;
+  var calc_set_6 = maxRep / 100 * 96;
+  var calc_set_7 = maxRep / 100 * 91;
+  var calc_set_8 = maxRep / 100 * 91;
+  var calc_set_9 = maxRep / 100 * 86;
+  var calc_set_10 = maxRep / 100 * 79;
+  
+  var disp_set1 = calc_set_1 + " x 10 (33% - Warm Up #1)";
+  var disp_set2 = calc_set_2 + " x 10 (56% - Warm Up #2)";
+  var disp_set3 = calc_set_3 + " x 5  (79% - Work Set #1)";
+  var disp_set4 = calc_set_4 + " x 3  (86% - Work Set #2)";
+  var disp_set5 = calc_set_5 + " x 1  (91% - Work Set #3)";
+  var disp_set6 = calc_set_6 + " x 1  (96% - Work Set #4)";
+  var disp_set7 = calc_set_7 + " x 1  (91% - Work Set #5)";
+  var disp_set8 = calc_set_8 + " x 1  (91% - Work Set #6)";
+  var disp_set9 = calc_set_9 + " x 3  (86% - Work Set #7)";
+  var disp_set10 = calc_set_10 + " x 5 (79% - Work Set #8)";
+
+
+  document.getElementById("set1").innerHTML = disp_set1;
+  document.getElementById("set2").innerHTML = disp_set2;
+  document.getElementById("set3").innerHTML = disp_set3;
+  document.getElementById("set4").innerHTML = disp_set4;
+  document.getElementById("set5").innerHTML = disp_set5;
+  document.getElementById("set6").innerHTML = disp_set6;
+  document.getElementById("set7").innerHTML = disp_set7;
+  document.getElementById("set8").innerHTML = disp_set8;
+  document.getElementById("set9").innerHTML = disp_set9;
+  document.getElementById("set10").innerHTML = disp_set10;
+}
+</script>
+
+</body>
+</html>
